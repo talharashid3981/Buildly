@@ -7,7 +7,7 @@ import Dashboard from './pages/Dashboard'
 import Generate from './pages/Generate'
 import WebsiteEditor from './pages/Editor'
 import Livesite from './pages/Livesite'
-export const serverUrl = "https://buildly-ots0.onrender.com"
+export const serverUrl = "https://buildly-ohex.onrender.com/"
 
 const App = () => {
   useGetCurrentUser()

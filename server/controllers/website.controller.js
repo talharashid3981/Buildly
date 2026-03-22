@@ -427,7 +427,7 @@ export const deploy = async (req, res) => {
     }
     
     website.deployed = true;
-    website.deployUrl = `${process.env.FRONTEND_URL || 'http://localhost:5173'}/site/${website.slug}`;
+    website.deployUrl = `${process.env.FRONTEND_URL || 'https://buildly-ots0.onrender.com/'}/site/${website.slug}`;
     await website.save();
 
     return res.status(200).json({

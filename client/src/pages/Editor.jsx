@@ -6,7 +6,7 @@ import { serverUrl } from "../App";
 import { BiCode, BiDesktop, BiRocket, BiMessage, BiLink } from "react-icons/bi";
 import { BsSend } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
-import { AnimatePresence, motion } from "motion/react";
+import { motion , AnimatePresence } from "framer-motion";
 import Editor from "@monaco-editor/react";
 
 const WebsiteEditor = () => {

@@ -11,6 +11,7 @@ const isAuth = async (req,res,next)=>{
         }
         const  decoded  = await jwt.verify(token,process.env.JWT_SECRET)
         req.user = await User.findById(decoded.id)
+        console.log("user is" , req.user)
         next()
     }
     catch(error){

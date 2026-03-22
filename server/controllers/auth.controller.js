@@ -9,7 +9,7 @@ export const googleAuth = async (req, res) => {
         message: "email is required",
       });
     }
-
+    
     let user = await User.findOne({ email });
 
     if (!user) {

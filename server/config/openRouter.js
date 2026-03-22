@@ -4,6 +4,7 @@ const model = "nvidia/nemotron-3-super-120b-a12b:free";
 
 const generateResponce = async (prompt) => {
   console.log("open router request come");
+  // console.log(process.env.OPENROUTER_API_KEY)
 
   const res = await fetch(openRouterUrl, {
     method: "POST",
@@ -16,8 +17,7 @@ const generateResponce = async (prompt) => {
       messages: [
         {
           role: "system",
-          content: `
-Return ONLY valid JSON.`,
+          content: `Return ONLY valid JSON.`,
         },
         {
           role: "user",
@@ -27,6 +27,7 @@ Return ONLY valid JSON.`,
       temperature: 0.2,
     }),
   });
+  console.log(process.env.OPENROUTER_API_KEY)
 
   if (!res.ok) {
     const errText = await res.text();
@@ -48,4 +49,3 @@ Return ONLY valid JSON.`,
 };
 
 export default generateResponce;
-

@@ -18,7 +18,7 @@ app.use(cors({
   credentials: true
 }));
 
-
+app.get("/", (req,res)=>res.send("API running"));
 app.use("/api/auth", authRouter)
 app.use("/api/user", userRouter)
 app.use("/api/website", websiteRouter)
